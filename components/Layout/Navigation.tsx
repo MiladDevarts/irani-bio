@@ -11,16 +11,26 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = (props) => {
   const [menuItems, setMenuItesm] = useState([
-    { value: "Home", slug: "https://irani.world" },
-    { value: "About us", slug: "https://irani.world/about" },
-    { value: "News", slug: "https://irani.news" },
-    { value: "Bio", slug: "/" },
-    { value: "FAQ", slug: "https://irani.world/faq" },
-    { value: "Help", slug: "https://irani.world/help" },
-    { value: "Terms", slug: "https://irani.world/terms" },
-    { value: "Contact us", slug: "https://irani.world/contact" },
+    { value: "Home", slug: "https://irani.world", isMainRoute: false },
+    {
+      value: "About us",
+      slug: "https://irani.world/about",
+      isMainRoute: false,
+    },
+    { value: "News", slug: "https://irani.news", isMainRoute: false },
+    { value: "Bio", slug: "/", isMainRoute: true },
+    { value: "FAQ", slug: "https://irani.world/faq", isMainRoute: false },
+    { value: "Help", slug: "https://irani.world/help", isMainRoute: false },
+    { value: "Terms", slug: "https://irani.world/terms", isMainRoute: false },
+    {
+      value: "Contact us",
+      slug: "https://irani.world/contact",
+      isMainRoute: false,
+    },
   ]);
 
+  const activeStyle =
+    "text-black border-t-4 border-black dark:text-white dark:border-white h-full flex items-center hover:cursor-pointer transitaion-all";
 
   return (
     <nav className="z-[1013] bg-white dark:bg-[#1a202c] shadow-deep absolute top-0 lg:top-[92%] w-full h-[8vh] border-t border-white-shade-4 dark:border-[#293446] soft-shadow">
@@ -29,6 +39,7 @@ const Navigation: React.FC<NavigationProps> = (props) => {
           {menuItems.map((link) => {
             return (
               <Link
+                className={link.isMainRoute && activeStyle}
                 href={link.slug}
               >
                 {link.value}
