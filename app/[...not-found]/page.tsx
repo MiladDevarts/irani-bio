@@ -16,7 +16,7 @@ export default function NotFoundPage() {
             Oh NO! Error 404
           </h1>
           <p className="text-white-shade-10 font-opensans font-medium text-lg mt-5 mb-8">
-            Maybe Irani Usa has broken this page. <br /> Come back to the
+            Maybe Irani World has broken this page. <br /> Come back to the
             homepage
           </p>
           <Link
