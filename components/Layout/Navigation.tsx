@@ -10,7 +10,7 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = (props) => {
-  const [menuItems, setMenuItesm] = useState([
+  const [menuItems, setMenuItems] = useState([
     { value: "Home", slug: "https://irani.world", isMainRoute: false },
     {
       value: "About us",
@@ -39,7 +39,6 @@ const Navigation: React.FC<NavigationProps> = (props) => {
           {menuItems.map((link) => {
             return (
               <Link
-                className={link.isMainRoute && activeStyle}
                 href={link.slug}
               >
                 {link.value}
