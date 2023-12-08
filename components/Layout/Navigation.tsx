@@ -17,7 +17,7 @@ const Navigation: React.FC<NavigationProps> = (props) => {
       slug: "https://irani.world/about",
       isMainRoute: false,
     },
-    { value: "News", slug: "https://irani.news", isMainRoute: false },
+    { value: "News", slug: "https://irani.world/blog", isMainRoute: false },
     { value: "Bio", slug: "/", isMainRoute: true },
     { value: "FAQ", slug: "https://irani.world/faq", isMainRoute: false },
     { value: "Help", slug: "https://irani.world/help", isMainRoute: false },
