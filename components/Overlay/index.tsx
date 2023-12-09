@@ -12,7 +12,7 @@ const OverlayMenu = () => {
   const [menuItems, setMenuItesm] = useState([
     { value: "Home", slug: "https://irani.world" },
     { value: "About us", slug: "https://irani.world/about" },
-    { value: "News", slug: "https://irani.news" },
+    { value: "Blog", slug: "https://irani.world/blog" },
     { value: "Bio", slug: "/" },
     { value: "FAQ", slug: "https://irani.world/faq" },
     { value: "Help", slug: "https://irani.world/help" },
