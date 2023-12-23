@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 import { MenuContext } from "@/context/MenuProvider";
@@ -11,14 +11,16 @@ const OverlayMenu = () => {
 
   const [menuItems, setMenuItesm] = useState([
     { value: "Home", slug: "https://irani.world" },
-    { value: "About us", slug: "https://irani.world/about" },
+    { value: "About", slug: "https://irani.world/about" },
     { value: "Blog", slug: "https://irani.world/blog" },
-    { value: "Bio", slug: "/" },
     { value: "FAQ", slug: "https://irani.world/faq" },
-    { value: "Help", slug: "https://irani.world/help" },
-    { value: "Terms", slug: "https://irani.world/terms" },
-    { value: "Contact us", slug: "https://irani.world/contact" },
+    { value: "Origin", slug: "https://irani.world/origin" },
+    { value: "Privacy Policy", slug: "https://irani.world/privacy-policy" },
+    { value: "Contact", slug: "https://irani.world/contact" },
   ]);
+
+
+
 
   const OverlayClasses = classNames(
     "z-[1010] block lg:hidden w-full h-auto transition-all fixed top-0 -left-[1200px] z-10 soft-shadow bg-white duration-500",
@@ -35,7 +37,7 @@ const OverlayMenu = () => {
           backgroundImage: `url('/images/menu/overlay-background.png')`,
         }}
       >
-        <ul className="py-6 container flex flex-col  gap-y-8 font-opensans font-normal text-2xl dark:text-white  text-black pt-28">
+        <ul className="py-10 container flex flex-col  gap-y-6 font-opensans font-normal text-lg dark:text-white  text-black pt-28">
           {menuItems.map((menuItem, index) => {
             return (
               <li key={index} className="text-black dark:text-white">
