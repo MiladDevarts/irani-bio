@@ -13,17 +13,17 @@ const Navigation: React.FC<NavigationProps> = (props) => {
   const [menuItems, setMenuItems] = useState([
     { value: "Home", slug: "https://irani.world", isMainRoute: false },
     {
-      value: "About us",
+      value: "About",
       slug: "https://irani.world/about",
       isMainRoute: false,
     },
     { value: "Blog", slug: "https://irani.world/blog", isMainRoute: false },
     { value: "Bio", slug: "/", isMainRoute: true },
     { value: "FAQ", slug: "https://irani.world/faq", isMainRoute: false },
-    { value: "Help", slug: "https://irani.world/help", isMainRoute: false },
-    { value: "Terms", slug: "https://irani.world/terms", isMainRoute: false },
+    { value: "Origin", slug: "https://irani.world/origin" },
+    { value: "Privacy Policy", slug: "https://irani.world/privacy-policy" },
     {
-      value: "Contact us",
+      value: "Contact",
       slug: "https://irani.world/contact",
       isMainRoute: false,
     },
